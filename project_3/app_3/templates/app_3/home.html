@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>This is app home</h1>
+    <h1>{{author}}</h1>
+    <h1>{{age}}</h1>
+    <h1>{{l}}</h1>
+      {% comment %} condition {% endcomment %}
+    {% if age >= 20 %}
+    <h2>You will get driving licence</h2>
+    {% elif age >= 10 and age <= 19 %}
+    <h3>You will not get driving licence</h3>
+    {% else %}
+    <h4>You are a child</h4>
+    {% endif %}
+
+    {% comment %} loop {% endcomment %}
+    {% for i in l %}
+    <h1> {{i}} </h1>
+    
+    {% endfor %}
+
+  </body>
+</html>
