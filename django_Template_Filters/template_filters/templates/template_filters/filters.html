@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% comment %} lenght finding  {% endcomment %}
+    <p>{{list}}</p>
+    <p>{{list | length}}</p>
+
+    {% comment %} adding filter  {% endcomment %}
+    {% for i in list %}
+    
+    <p>{{i | add:'6'}}</p>
+    {% endfor %}
+
+    {% comment %} 2. capfirst {% endcomment %}
+
+    <p>{{name| capfirst}}</p>
+
+    {% comment %} date time filter  {% endcomment %}
+    <p>{{dat | date:"D d M Y"}}</p>
+
+    {% comment %} 4. default {% endcomment %}
+    <p>{{empty| default:"There is nothing inside"}}</p>
+
+    {% comment %} escape filter {% endcomment %}
+    <p> {{ esc |escape}} </p>
+
+    {% comment %} lower {% endcomment %}
+    <p>{{lower|lower}}</p>
+    
+    {% comment %} upper {% endcomment %}
+    <p>{{upper|upper}}</p>
+    
+    {% comment %} title {% endcomment %}
+    <p>{{title|title}}</p>
+
+    {% comment %} join {% endcomment %}
+<p> {{joi|join:"\/"}} </p>
+
+{% comment %} 11. addslashes {% endcomment %}
+<p>{{ad_slash|addslashes}}</p>
+
+{% comment %} center {% endcomment %}
+<pre>what i am saying {{ center|center:"20" }}</pre>
+
+{% comment %} cut {% endcomment %}
+<p> {{cutting|cut:"0"}} </p>
+
+{% comment %} 14. dictsort {% endcomment %}
+<p> {{dictsort| dictsort:"age" }} </p>
+{% comment %} 15. divisibleby {% endcomment %}
+<p> {{div | divisibleby:"3"}} </p>
+
+{% comment %} 16. filesizeformat {% endcomment %}
+<p> {{convert|filesizeformat }} </p>
+
+{% comment %} 17. first {% endcomment %}
+<p> {{ab| first}} </p>
+{% comment %} 17. last {% endcomment %}
+<p> {{ab| last}} </p>
+
+{% comment %} line numbers {% endcomment %}
+
+<p style="white-space: pre-line;" > {{serial| linenumbers }} </p>
+
+{% comment %} 20. make_list {% endcomment %}
+<p>{{convert| make_list}}</p>
+
+{% comment %} 21. random {% endcomment %}
+<p> {{joi|random}} </p>
+
+{% comment %} slice {% endcomment %}
+<p> {{cutting|slice:"5"}} </p>
+
+{% comment %} slugify {% endcomment %}
+<p> {{slugify| slugify}} </p>
+
+{% comment %} 24. time
+It is used to format a time according to the given format. {% endcomment %}
+<p>{{dat|time:"H:i"}}</p>
+
+{% comment %} 25. timesince
+It is used to format a date as the time since that date (e.g., “4 days, 6 hours”). {% endcomment %}
+<p>{{ blog_date|timesince }} ago</p>
+
+{% comment %} 26 unordered_list for the multiple nested list {% endcomment %}
+
+<p> {{menu|unordered_list}} </p>
+
+
+</body>
+</html> 
