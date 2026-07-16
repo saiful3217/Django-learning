@@ -49,4 +49,4 @@ def load_data(reqeust):
 
 def about(request):
     print(request.GET)
-    return render(request,'app_1/load_data.html',{'id':request.GET})
+    return render(request,'app_1/about.html',{'id':request.GET})
