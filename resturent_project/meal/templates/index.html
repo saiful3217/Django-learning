@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Iteams{% endblock title %}
+{% block meal %}
+
+
+
+
+
+<div class=" container   ">
+   
+<div class="row m-3 ">
+    
+        {% for i in categories %}
+        <div class="col-4 mt-4 d-flex justify-content-center ">
+    <div class="card " style="width: 18rem;">
+  <img src="{{i.strCategoryThumb}}" class="card-img-top" alt="Food img">
+  <div class="card-body">
+    <h5 class="card-title">{{i.strCategory}}</h5>
+    <h6 class="">Id: {{i.idCategory}} </h6>
+    <p class="card-text">{{i.strCategoryDescription | truncatewords:10 }}</p>
+  </div>
+</div>
+
+</div>
+{% endfor %}
+</div>
+</div>
+{% endblock meal %}
